@@ -1,0 +1,163 @@
+/* body {
+	background-image: url("./images/background-covid.jpg");
+}
+.flex-container {
+	display: flex !important;
+	justify-items: flex-start;
+	margin: 20px;
+}
+
+.logo {
+	width: 300px;
+	height: 123px;
+}
+
+.chart {
+	position: absolute;
+	left: 400px;
+}
+
+.dataPicker {
+	text-align: center;
+	position: absolute;
+	width: 250px;
+	bottom: 250px;
+	left: 860px;
+}
+
+.dataPicker div:hover {
+	cursor: pointer;
+}
+
+.text Attributes chart {
+	text-anchor: end;
+	transform: translate(-5, 0);
+}
+
+.searchCountries {
+	position: absolute;
+	left: 20px;
+	top: 200px;
+}
+
+.search-bar {
+	margin-bottom: 100px;
+}
+
+.countryList {
+	width: 300px;
+	height: 240px;
+	margin-top: 15px;
+	overflow-y: scroll;
+}
+
+.country {
+	position: relative;
+	padding: 10px;
+}
+
+.country:nth-child(odd) {
+	background-color: rgb(255, 255, 255);
+}
+
+.country:nth-child(even) {
+	background-color: #ccc;
+}
+
+.country label {
+	margin: 5px;
+}
+
+.country input[type='checkbox'] {
+	margin-right: 20px;
+}
+
+.country input[type='color'] {
+	position: absolute;
+	right: 5px;
+} */
+
+body {
+	background-image: url("./images/background-covid.jpg");
+}
+
+.container {
+	display: grid !important;
+}
+
+.logo {
+	justify-self: start;
+	margin: 15px;
+	width: 300px;
+	height: 123px;
+
+}
+
+.searchCountries {
+	grid-column-start: 1;
+	margin-top: 40px;
+	margin-left: 20px;
+
+} 
+
+.chart {
+	grid-row-start: 2;
+	grid-column-start: 2;
+	margin-top: -90px;
+	margin-left: -230px;
+}
+
+.dataPicker {
+	grid-row-start: 3;
+	grid-column-start: 2;
+	justify-self: start;
+	margin-top: 40px;
+	margin-left: 180px;
+	text-align: center;
+	width: 250px;
+	
+}
+
+.dataPicker div:hover {
+	cursor: pointer;
+}
+
+.text Attributes chart {
+	text-anchor: end;
+	transform: translate(-5, 0);
+}
+
+
+.countryList {
+	width: 300px;
+	height: 240px;
+	margin-top: 15px;
+	margin-right: 170px;
+	overflow-y: scroll;
+}
+
+.country {
+	position: relative;
+	padding: 10px;
+}
+
+.country:nth-child(odd) {
+	background-color: rgb(255, 255, 255);
+}
+
+.country:nth-child(even) {
+	background-color: #ccc;
+}
+
+.country label {
+	margin: 5px;
+}
+
+.country input[type='checkbox'] {
+	margin-right: 20px;
+}
+
+.country input[type='color'] {
+	position: absolute;
+	right: 5px;
+}
