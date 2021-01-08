@@ -161,3 +161,9 @@ body {
 	position: absolute;
 	right: 5px;
 }
+
+.legend {
+	background-color: white;
+	margin-left: 20px;
+	font-size: larger;
+}
