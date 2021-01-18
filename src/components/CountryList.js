@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Country from './Country';
 
-import { Search } from 'semantic-ui-react';
+import { Search, Button } from 'semantic-ui-react';
 
 const CountryList = (props) => {
 	const [filterText, setFilterText] = useState('');

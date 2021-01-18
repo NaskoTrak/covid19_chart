@@ -78,7 +78,8 @@
 } */
 
 body {
-	background-image: url("./images/background-covid.jpg");
+	background-image: url('./images/background-covid.jpg');
+	height: 100vh;
 }
 
 .container {
@@ -90,15 +91,13 @@ body {
 	margin: 15px;
 	width: 300px;
 	height: 123px;
-
 }
 
 .searchCountries {
 	grid-column-start: 1;
 	margin-top: 40px;
 	margin-left: 20px;
-
-} 
+}
 
 .chart {
 	grid-row-start: 2;
@@ -112,10 +111,9 @@ body {
 	grid-column-start: 2;
 	justify-self: start;
 	margin-top: 40px;
-	margin-left: 180px;
+	margin-left: 350px;
 	text-align: center;
 	width: 250px;
-	
 }
 
 .dataPicker div:hover {
@@ -126,7 +124,6 @@ body {
 	text-anchor: end;
 	transform: translate(-5, 0);
 }
-
 
 .countryList {
 	width: 300px;
@@ -162,8 +159,27 @@ body {
 	right: 5px;
 }
 
+.chartLegend {
+	display: flex;
+	align-items:flex-start; 
+}
+
 .legend {
 	background-color: white;
 	margin-left: 20px;
 	font-size: larger;
 }
+
+.copyrightContainer {
+	position: absolute;
+	bottom: 0;
+	margin-left: 50%;
+	height: 2.5rem;
+}
+
+/* .copyrightFooter {
+	position: absolute;
+	right: 50%; 
+	-ms-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+} */

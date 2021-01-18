@@ -4,6 +4,7 @@ import CountryList from './components/CountryList';
 import Chart from './components/Chart';
 import DataPicker from './components/DataPicker';
 import ChartLegend from './components/ChartLegend';
+import Footer from './components/Footer';
 
 import './Style.css';
 import logo from './images/COVID19.png';
@@ -22,7 +23,19 @@ class App extends React.Component {
 		this.setState({ countries });
 	}
 
+	countryAlreadySelected = (countryName, checkedCountries) => {
+		checkedCountries.forEach((c) => {
+			if (c.Country === countryName) {
+				return true;
+			}
+		});
+		return false;
+	};
+
 	pickCountry = async (country, countryColor) => {
+		if (this.countryAlreadySelected(country, this.state.checkedCountries)) {
+			return;
+		}
 		const data = await getCountry(country, this.state.countries);
 
 		let combinedState = this.state.checkedCountries;
@@ -31,32 +44,36 @@ class App extends React.Component {
 			countryName: country,
 			countryData: data,
 		});
-		this.setState(combinedState);
+		this.setState({ checkedCountries: combinedState });
 	};
 
 	removeCountry = (country) => {
-		console.log(
-			'Will try to remove: ' +
-				country +
-				' ' +
-				this.state.checkedCountries.length
-		);
 		const data = this.state.checkedCountries.filter((e) => {
 			return e.countryName !== country;
 		});
 		this.setState({ checkedCountries: data });
 	};
 
+	removeAllCheckedCountries = () => {
+		this.setState({ checkedCountries: [] });
+		document.querySelectorAll('div.country>input[type=checkbox]').forEach( el => el.checked = false );  // Simple JS solution for uncheck all checkboxes; 
+	};
+
 	countryColorChange = (countryName, newColor) => {
 		this.removeCountry(countryName);
+
 		const countryData = this.state.countries;
 		countryData.forEach((c) => {
 			if (c.Country === countryName) {
-				console.log('Nameri');
 				c.Color = newColor;
 			}
 		});
-		this.setState({ countries: countryData });
+
+		this.setState({
+			countries: countryData,
+		});
+
+		// Fix for chart doesn't change color after color change
 		this.pickCountry(countryName, newColor);
 	};
 
@@ -75,20 +92,19 @@ class App extends React.Component {
 					countryColorChange={this.countryColorChange}
 				/>
 				<ChartLegend
-					className="legend"
 					checkedCountries={this.state.checkedCountries}
+					removeAllCheckedCountries={this.removeAllCheckedCountries}
 				/>
 				<Chart
-					className="chart"
 					checkedCountries={this.state.checkedCountries}
 					chosenData={this.state.chosenData}
 				/>
 				<DataPicker
-					className="dataPicker"
 					setDataPicker={this.setDataPicker}
 					dataChoices={this.state.dataChoices}
 					chosenData={this.state.chosenData}
 				/>
+				<Footer />
 			</div>
 		);
 	}

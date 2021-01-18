@@ -1,5 +1,6 @@
 import React from 'react';
 import { DiscreteColorLegend } from 'react-vis';
+import { Button } from 'semantic-ui-react';
 
 const mappedLegend = (checkedCountries) => {
 	return checkedCountries.map((c) => {
@@ -8,13 +9,17 @@ const mappedLegend = (checkedCountries) => {
 };
 
 const ChartLegend = (props) => {
+
 	return (
-		<DiscreteColorLegend
-			className="legend"
-			height={200}
-			width={200}
-			items={mappedLegend(props.checkedCountries)}
-		/>
+		<div className="chartLegend">
+			<DiscreteColorLegend
+				className="legend"
+				height={200}
+				width={200}
+				items={mappedLegend(props.checkedCountries)}
+			/>
+			<Button className='clearBtn'  color='red' icon='delete' onClick={() => props.removeAllCheckedCountries()} />
+		</div>
 	);
 };
 

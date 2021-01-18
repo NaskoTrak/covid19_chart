@@ -9,6 +9,5 @@ let tempData = {
 let testProp = 'cases';
 console.log(tempData.cases);
 console.log(tempData[testProp]);
-console.log(tempData["cases"]);
-console.log("cases");
-
+console.log(tempData['cases']);
+console.log('cases');
