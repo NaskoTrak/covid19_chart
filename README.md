@@ -15,7 +15,7 @@ React JS Project which shows on chart the worldwide spreading of Covid19
 * React
 * Chart with React-VIS
 * Semantic UI React
-* API call's with Axios
+* API calls with Axios
 
 ### Install:
 1. `git clone {this repository}`
