@@ -1,68 +1,27 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Covid19Chart
+React JS Project which shows on chart the worldwide spreading of Covid19
 
-## Available Scripts
+### Features:
+* Embedded Search Bar to choose country OR choose country by scrolling on the list of countries
+* Choose country by clicking on it's name
+* The chosen country Covid statistics (from API) will be shown on the chart in chronological order
+* With the Drop Down menu choose the type of data to show: Active cases(default), Confirmed cases, Death cases or Recovered cases
+* You can choose multiple countries simultaneously and compare their stats on the chart
+* You can change the color of the chosen country in the chart by clicking the color button next it's name from the list
+* All chosen countries and their correspond color on the Chart are shown on a Legend table
+* Click on the red button near the Legend table to clear the results
 
-In the project directory, you can run:
+### Uses:
+* React
+* Chart with React-VIS
+* Semantic UI React
+* API call's with Axios
 
-### `npm start`
+### Install:
+1. `git clone {this repository}`
+2. `npm install`
+3. `npm start`
+4. Open browser on `http://localhost:3000/`  
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+### Screenshot:
+![Home screen](https://raw.githubusercontent.com/NaskoTrak/covid19_chart/main/Covid_App.png "Home screen")
